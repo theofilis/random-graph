@@ -1,4 +1,4 @@
-random_graph
+Random Graph 
 ============
 
 Methods to generate a random graph.
