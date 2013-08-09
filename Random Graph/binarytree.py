@@ -58,13 +58,25 @@ def genareteRandomBinaryTree(n, a,b):
 
         for i in range(k):
             label += i + 1
-            print ("node ", label)
             T.add_edge(y[0], label)
 
         n -= k
 
     return T
 
-T = genareteRandomBinaryTree(30, 0, 0.5)
-nx.draw(T)
-plt.show()
+def genareteRandomBinaryTreeLeaf(n, a,b):
+    T = nx.Graph()
+    T.add_node(0)
+    label = 0
+    while n > 0:
+        y = random.sample([x for x in T.nodes() if len(T.neighbors(x)) <= 1], 1)
+
+        k = g(a,b)
+
+        for i in range(k):
+            label += i + 1
+            T.add_edge(y[0], label)
+
+        n -= k
+
+    return T
