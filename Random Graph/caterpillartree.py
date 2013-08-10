@@ -45,7 +45,7 @@ def genareteCaterpillarTree(n, m):
         k = childs(m)
         for j in range(k):
             label = label + 1
-            T.add_edge(i, j)
+            T.add_edge(i, label)
 
     return T
 
