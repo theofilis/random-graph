@@ -34,7 +34,7 @@ import matplotlib.pyplot as plt
 import random
 
 def childs(m):
-    p = random.randint(m);
+    p = random.randint(0, m);
     return p
 
 def genareteCaterpillarTree(n, m):
